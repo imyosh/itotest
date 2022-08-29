@@ -1,31 +1,8 @@
-let videoBtn = document.getElementById('video-btn')
-let videoModal = document.getElementById('video-modal')
-let videoModalCloseBtn = document.getElementById('video-modal-close')
-
-videoBtn.onclick = function () {
-  videoModal.classList.add('open')
-}
-
-// videoModal.onclick = ()=> {
-//     videoModal.classList.remove('open')
-//     videoModal.style.animation = "close 0.3s forwards"
-// }
-
-videoModalCloseBtn.onclick = () => {
-  videoModal.classList.remove('open')
-  videoModal.style.animation = 'close 0.3s forwards'
-  document
-    .getElementById('video-iframe')
-    .contentWindow.postMessage(
-      '{"event":"command","func":"' + 'pauseVideo' + '","args":""}',
-      '*'
-    )
-}
 
 let pdfBtn = document.getElementById('pdf-btn')
 let pdfModal = document.getElementById('pdf-modal')
 let pdfModalCloseBtn = document.getElementById('pdf-modal-close')
-let pdfModalDownloadBtn = document.getElementById('video-modal-download')
+
 
 pdfBtn.onclick = function () {
   pdfModal.classList.add('open')
@@ -72,3 +49,6 @@ pdfModalCloseBtn.onclick = () => {
 //   }
 //   req.send()
 // }
+
+
+
